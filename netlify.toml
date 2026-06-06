@@ -1,0 +1,12 @@
+# The edge function handles /yahoo/* → Yahoo Finance with browser headers
+# This runs at Netlify's edge nodes (clean IPs, no rate limiting)
+
+[[edge_functions]]
+  path = "/yahoo/*"
+  function = "yahoo-proxy"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
