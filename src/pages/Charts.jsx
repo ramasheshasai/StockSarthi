@@ -147,8 +147,9 @@ export default function Charts() {
         </div>
 
         {chartLoading ? <SkeletonChart /> : chartErr ? (
-          <div className="flex items-center justify-center h-48 rounded-xl bg-[#1e293b] border border-[#334155]">
-            <p className="text-[#64748b] text-sm">{chartErr}</p>
+          <div className="flex flex-col items-center justify-center h-48 rounded-xl bg-[#1e293b] border border-[#334155] gap-2">
+            <p className="text-[#ef4444] text-sm font-medium">Chart unavailable</p>
+            <p className="text-[#64748b] text-xs text-center px-4">{chartErr}</p>
           </div>
         ) : chartData.length > 0 ? (
           <>

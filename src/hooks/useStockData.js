@@ -40,7 +40,7 @@ export function useQuotes(symbols, autoRefresh = false, intervalMs = 60_000) {
 
 export function useChart(symbol, interval, range) {
   const [data, setData] = useState(null)
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(Boolean(symbol))
   const [error, setError] = useState(null)
 
   useEffect(() => {
