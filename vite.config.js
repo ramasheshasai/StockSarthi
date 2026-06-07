@@ -124,11 +124,11 @@ export default defineConfig({
     yahooDevProxy(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+      includeAssets: ['logo.svg'],
       manifest: {
         name: 'StockSarthi',
         short_name: 'StockSarthi',
-        description: 'Your Indian Stock Market Companion',
+        description: 'सारथी — Your Personal Stock Portfolio Tracker',
         theme_color: '#0f172a',
         background_color: '#0f172a',
         display: 'standalone',
@@ -136,9 +136,8 @@ export default defineConfig({
         scope: '/',
         start_url: '/',
         icons: [
-          { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
-          { src: 'pwa-512x512.png', sizes: '512x512', type: 'image/png' },
-          { src: 'pwa-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' },
+          { src: 'logo.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' },
+          { src: 'logo.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'maskable' },
         ],
       },
       workbox: {

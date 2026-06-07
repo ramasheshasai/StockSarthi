@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { LayoutDashboard, Briefcase, BarChart2, Star, TrendingUp } from 'lucide-react'
+import { LayoutDashboard, Briefcase, BarChart2, Star } from 'lucide-react'
 
 const NAV = [
   { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
@@ -12,12 +12,10 @@ export default function Sidebar() {
   return (
     <aside className="hidden lg:flex flex-col w-60 min-h-screen bg-[#0a1120] border-r border-[#334155] px-3 py-5 shrink-0">
       <div className="flex items-center gap-3 px-2 mb-8">
-        <div className="w-9 h-9 rounded-lg bg-[#6366f1] flex items-center justify-center shrink-0">
-          <TrendingUp size={18} className="text-white" strokeWidth={2.5} />
-        </div>
+        <img src="/logo.svg" alt="StockSarthi" className="w-10 h-10 rounded-xl shrink-0" />
         <div>
           <p className="font-headline text-[#f1f5f9] font-bold text-base leading-tight">StockSarthi</p>
-          <p className="text-[#64748b] text-[10px]">My Portfolio Tracker</p>
+          <p className="text-[#64748b] text-[10px]">सारथी · Portfolio Tracker</p>
         </div>
       </div>
       <nav className="flex-1 space-y-1">

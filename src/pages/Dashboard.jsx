@@ -59,11 +59,14 @@ export default function Dashboard() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <div className="px-4 pt-6 pb-2">
-        <p className="text-[#475569] text-xs font-medium">
-          {new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
-        </p>
-        <h1 className="font-headline text-[#f1f5f9] font-bold text-2xl mt-0.5">My Portfolio</h1>
+      <div className="px-4 pt-5 pb-2 flex items-center gap-3 lg:pt-6">
+        <img src="/logo.svg" alt="StockSarthi" className="w-10 h-10 rounded-xl shrink-0 lg:hidden" />
+        <div>
+          <p className="font-headline text-[#f1f5f9] font-bold text-2xl leading-tight">StockSarthi</p>
+          <p className="text-[#475569] text-[11px]">
+            {new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long' })}
+          </p>
+        </div>
       </div>
 
       <div className="flex-1 px-4 space-y-4 pb-28">
